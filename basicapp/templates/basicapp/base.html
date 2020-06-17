@@ -1,0 +1,59 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'crud/css/bootstrap.min.css' %}">
+
+    {% block head %}
+
+    {% endblock head %}
+
+    <title>Django Starter Boilerplate</title>
+</head>
+<body>
+
+{% if messages %}
+    {% for message in mesages %}
+        <div class="container">
+            <h1>Hello</h1>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container bg-dark text-light p-5 mt-5 shadow-lg" style="border-radius: 5px">
+    <h1>Hello World!</h1>
+    <h4 class="text-muted">This is a Boilerplate Django Project</h4>
+</div>
+
+{% block content %}
+
+{% endblock content %}
+
+</body>
+<script src="{% static 'crud/js/bootstrap.min.js' %}"></script>
+{% block script %}
+
+{% endblock script %}
+
+</html>
